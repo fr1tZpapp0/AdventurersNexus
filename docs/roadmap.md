@@ -2,6 +2,7 @@ Adventurer's Nexus ROADMAP
 
 ---------------------------------------------------
 PHASE 0 - Foundation
+
 	Project Management
 		[X] Private Github Repository Created
 		[X] README Started
@@ -18,6 +19,7 @@ PHASE 0 - Foundation
 
 ---------------------------------------------------
 PHASE 1 - Skeletal Backend
+
 	Structure
 		backend/
 		|
@@ -41,6 +43,7 @@ PHASE 1 - Skeletal Backend
 
 ---------------------------------------------------
 PHASE 2 - D&D Rules Engine Structure  (CURRENT)
+
 	Python (not yet web)
 		backend/
 		|
@@ -63,6 +66,7 @@ PHASE 2 - D&D Rules Engine Structure  (CURRENT)
 
 ---------------------------------------------------
 PHASE 3 - Character System (THE FIRST BIG ONE)
+
 	models/character.py
 		Add:
 			Name
@@ -91,6 +95,7 @@ PHASE 3 - Character System (THE FIRST BIG ONE)
 
 ---------------------------------------------------
 PHASE 4 - Database Integration
+
 	Add:
 		PostgreSQL
 		SQLAlchemy
@@ -122,6 +127,7 @@ PHASE 5 - User Accounts
 
 ---------------------------------------------------
 PHASE 6 - DM Campaign Manager
+
 	Campaign
 		Players
 		Sessions
@@ -148,6 +154,7 @@ PHASE 6 - DM Campaign Manager
 
 ---------------------------------------------------
 PHASE 7 - Monster & Encounter System
+
 	Add:
 		Monster
 			Stats
@@ -170,6 +177,7 @@ PHASE 7 - Monster & Encounter System
 
 ---------------------------------------------------
 PHASE 8 - Combat Tracker
+
 	Initiative Tracking
 	Additional Tracking:
 		HP
@@ -182,6 +190,7 @@ PHASE 8 - Combat Tracker
 
 ---------------------------------------------------
 PHASE 9 - Virtual Tabletop (A MASSIVE ONE)
+
 	Maps
 	Tokens
 	Movement
@@ -198,6 +207,7 @@ PHASE 9 - Virtual Tabletop (A MASSIVE ONE)
 
 ---------------------------------------------------
 PHASE 10 - Discord Bot Integration (Surprisingly Easy)
+
 	Command Prefix: #
 	Commands:
 		#roll
