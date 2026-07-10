@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from .core import dice
 import json
 
 # 1.	cd frontend
@@ -7,6 +8,8 @@ import json
 # 3.	cd ../backend
 # 4.	.venv/Scripts/activate
 # 5.	uvicorn app.main:app --reload
+
+rolledDice = []
 
 
 app = FastAPI(title="Adventurers Nexus API", version="1.0.0")
@@ -27,4 +30,11 @@ def load_character(character_id: int):
 
 	return characters_data
 
+@app.get('/dice/{die_number}')
+def roll(die_number: int, amount: int, modifier: int | None=None):
+	return dice.diceRoll(die_number, amount, modifier)
 
+
+@app.get('/advantage/{modifier}')
+def advantage(modifier: int):
+	return dice.advantage(modifier)

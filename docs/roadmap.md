@@ -1,17 +1,17 @@
 Adventurer's Nexus ROADMAP
 
 ---------------------------------------------------
-PHASE 0 - Foundation (CURRENT)
+PHASE 0 - Foundation
 	Project Management
 		[X] Private Github Repository Created
-		[ ] README Complete
-		[ ] Development Guidelines Written
+		[X] README Started
+		[X] Development Guidelines Written
 		[X] Roadmap Documented
 
 	Development Enviroment
 		[X] React + TypeScript + Vite installed
-		[ ] Python Backend Enviroment Created
-		[ ] VSCode Workspace Configured
+		[X] Python Backend Enviroment Created
+		[X] VSCode Workspace Configured
 
 
 
@@ -40,7 +40,7 @@ PHASE 1 - Skeletal Backend
 
 
 ---------------------------------------------------
-PHASE 2 - D&D Rules Engine Structure
+PHASE 2 - D&D Rules Engine Structure  (CURRENT)
 	Python (not yet web)
 		backend/
 		|
