@@ -52,7 +52,8 @@ PHASE 2 - D&D Rules Engine Structure  (CURRENT)
 			|- abilities.py		{NOT STARTED}
 			|- modifiers.py		{NOT STARTED}
 			|- skills.py		{HAS BEGUN: List of all Skills}
-			|- combat.py		{HAS BEGUN: List of all armors & weapons, without ac/dmg}
+			|- combat.py		{HAS BEGUN: all armors & weapons listed}
+			|- shops.py			{HAS BEGUN: listed all armor & weapon names}
 
 	Implement
 		Dice
