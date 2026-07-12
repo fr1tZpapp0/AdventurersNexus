@@ -159,7 +159,8 @@ weapons_list = {
 # print(weapons_list["Martial Melee"][3]["damage"])
 
 
-
+def attack(target, damage, additional_Effect_Damage):
+	print("This will deal damage to the target + any additional effects & the respective damages")
 
 
 

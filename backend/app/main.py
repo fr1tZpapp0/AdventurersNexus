@@ -55,3 +55,9 @@ def advantage(modifier: int | None=0):
 @app.get('/dice/disadvantage')
 def disadvantage(modifier: int | None=0):
 	return adv_or_dis(modifier, True)
+
+
+
+
+
+
