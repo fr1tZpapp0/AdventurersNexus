@@ -48,11 +48,11 @@ PHASE 2 - D&D Rules Engine Structure  (CURRENT)
 		backend/
 		|
 		|- core
-			|- dice.py
-			|- abilities.py
-			|- modifiers.py
-			|- skills.py
-			|- combat.py
+			|- dice.py			{Completed Dice Rolling}
+			|- abilities.py		{NOT STARTED}
+			|- modifiers.py		{NOT STARTED}
+			|- skills.py		{HAS BEGUN: List of all Skills}
+			|- combat.py		{HAS BEGUN: List of all armors & weapons, without ac/dmg}
 
 	Implement
 		Dice

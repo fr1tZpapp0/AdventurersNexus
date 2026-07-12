@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from .core import dice
+from app.core import roll_dice, adv_or_dis
 import json
 
-# 1.	cd frontend
+# 1.	cd AdventurersNexus/frontend
 # 2.	npm run dev
 # 3.	cd ../backend
 # 4.	.venv/Scripts/activate
@@ -30,11 +30,16 @@ def load_character(character_id: int):
 
 	return characters_data
 
-@app.get('/dice/{die_number}')
-def roll(die_number: int, amount: int, modifier: int | None=None):
-	return dice.diceRoll(die_number, amount, modifier)
+@app.get('/dice/roll/{die_number}')
+def roll(die_number: int, amount: int, modifier: int | None=0):
+	return roll_dice(die_number, amount, modifier)
 
 
-@app.get('/advantage/{modifier}')
-def advantage(modifier: int):
-	return dice.advantage(modifier)
+@app.get('/dice/advantage')
+def advantage(modifier: int | None=0):
+	return adv_or_dis(modifier, False)
+
+
+@app.get('/dice/disadvantage')
+def disadvantage(modifier: int | None=0):
+	return adv_or_dis(modifier, True)
