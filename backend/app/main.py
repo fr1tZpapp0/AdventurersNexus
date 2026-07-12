@@ -20,6 +20,9 @@ app = FastAPI(title="Adventurers Nexus API", version="1.0.0")
 def get_status():
 	return "Welcome to the Adventurers Nexus API!"
 
+
+
+
 @app.get("/characters/load/{character_id}")
 def load_character(character_id: int):
 	with open(f"database/{character_id}.json", "r") as f:
@@ -30,14 +33,23 @@ def load_character(character_id: int):
 
 	return characters_data
 
+
+
+
 @app.get('/dice/roll/{die_number}')
 def roll(die_number: int, amount: int, modifier: int | None=0):
 	return roll_dice(die_number, amount, modifier)
 
 
+
+
+
 @app.get('/dice/advantage')
 def advantage(modifier: int | None=0):
 	return adv_or_dis(modifier, False)
+
+
+
 
 
 @app.get('/dice/disadvantage')

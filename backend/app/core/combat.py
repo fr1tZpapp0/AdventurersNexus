@@ -1,7 +1,8 @@
 
 
-def define_armor(cost, ac, mod, str_req, stealth, weight):
+def define_armor(name, cost, ac, mod, str_req, stealth, weight):
 	_Armor = {
+		"name": name,
 		"cost": f"{cost}gp",
 		"ac": ac,
 		"modifier": mod,
@@ -12,8 +13,9 @@ def define_armor(cost, ac, mod, str_req, stealth, weight):
 
 	return _Armor
 
-def define_weapon(cost, damage, weight, properties):
+def define_weapon(name, cost, damage, weight, properties):
 	_Weapon = {
+		"name": name,
 		"cost": cost,
 		"damage": damage,
 		"weight": weight,
@@ -24,73 +26,73 @@ def define_weapon(cost, damage, weight, properties):
 
 
 # Light Armors
-padded_Armor = define_armor(5, 11, "Dexterity", 0, "Disadvantage", 8)
-leather_Armor = define_armor(10, 11, "Dexterity", 0, "No", 10)
-studded_Leather_Armor = define_armor(45, 12, "Dexterity", 0, "No", 13)
+padded_Armor = define_armor("Padded Armor", 5, 11, "Dexterity", 0, "Disadvantage", 8)
+leather_Armor = define_armor("Leather Armor", 10, 11, "Dexterity", 0, "No", 10)
+studded_Leather_Armor = define_armor("Studded Leather Armor", 45, 12, "Dexterity", 0, "No", 13)
 
 # Medium Armors
-hide_Armor = define_armor(10, 12, "Dexterity (Max of +2)", 0, "No", 12)
-chain_Shirt_Armor = define_armor(50, 13, "Dexterity (Max of +2)", 0, "No", 20)
-scale_Mail_Armor = define_armor(50, 14, "Dexterity (Max of +2)", 0, "Disadvantage", 45)
-breastplate_Armor = define_armor(400, 14, "Dexterity (Max of +2)", 0, "No", 20)
-half_Plate_Armor = define_armor(750, 15, "Dexterity (Max of +2)", 0, "Disadvantage", 40)
+hide_Armor = define_armor("Hide Armor", 10, 12, "Dexterity (Max of +2)", 0, "No", 12)
+chain_Shirt_Armor = define_armor("Chain Shirt", 50, 13, "Dexterity (Max of +2)", 0, "No", 20)
+scale_Mail_Armor = define_armor("Scale Mail", 50, 14, "Dexterity (Max of +2)", 0, "Disadvantage", 45)
+breastplate_Armor = define_armor("Breastplate", 400, 14, "Dexterity (Max of +2)", 0, "No", 20)
+half_Plate_Armor = define_armor("Half-Plate", 750, 15, "Dexterity (Max of +2)", 0, "Disadvantage", 40)
 
 # Heavy Armors
-ring_Mail_Armor = define_armor(30, 14, "No", 0, "Disadvantage", 40)
-chain_Mail_Armor = define_armor(75, 16, "No", 13, "Disadvantage", 55)
-splint_Armor = define_armor(200, 17, "No", 15, "Disadvantage", 60)
-plate_Armor = define_armor(1500, 18, "No", 15, "Disadvantage", 65)
+ring_Mail_Armor = define_armor("Ring Mail", 30, 14, "No", 0, "Disadvantage", 40)
+chain_Mail_Armor = define_armor("Chain Mail", 75, 16, "No", 13, "Disadvantage", 55)
+splint_Armor = define_armor("Splint Armor", 200, 17, "No", 15, "Disadvantage", 60)
+plate_Armor = define_armor("Plate Armor", 1500, 18, "No", 15, "Disadvantage", 65)
 
 # Shields
-shield_Armor = define_armor(10, "+2", "No", 0, "No", 6)
+shield_Armor = define_armor("Shield", 10, "+2", "No", 0, "No", 6)
 
 
 
 # Simple Melee Weapons
-club = define_weapon("1sp", "1d4 Bludgeoning", 2, ["Light"])
-dagger = define_weapon("2gp", "1d4 Piercing", 1, ["Finesse, Light", "Thrown (Range: 20/60)"])
-greatclub = define_weapon("2sp", "1d8 Bludgeoning", 10, ["Two-Handed"])
-handaxe = define_weapon("5gp", "1d6 Slashing", 2, ["Light", "Thrown (Range: 20/60)"])
-javelin = define_weapon("5sp", "1d6 Piercing", 2, ["Thrown (Range: 20/60)"])
-light_Hammer = define_weapon("2gp", "1d4 Bludgeoning", 2, ["Light, Thrown (Range: 20/60)"])
-mace = define_weapon("5gp", "1d6 Bludgeoning", 4, [])
-quarterstaff = define_weapon("2sp", "1d6 Bludgeoning", 4, ["Versatile (1d8)"])
-sickle = define_weapon("1gp", "1d4 Slashing", 2, ["Light"])
-spear = define_weapon("1gp", "1d6 Piercing", 3, ["Thrown (Range: 20/60)", "Versatile (1d8)"])
+club = define_weapon("Club", "1sp", "1d4 Bludgeoning", 2, ["Light"])
+dagger = define_weapon("Dagger", "2gp", "1d4 Piercing", 1, ["Finesse, Light", "Thrown (Range: 20/60)"])
+greatclub = define_weapon("Greatclub", "2sp", "1d8 Bludgeoning", 10, ["Two-Handed"])
+handaxe = define_weapon("Handaxe", "5gp", "1d6 Slashing", 2, ["Light", "Thrown (Range: 20/60)"])
+javelin = define_weapon("Javelin", "5sp", "1d6 Piercing", 2, ["Thrown (Range: 20/60)"])
+light_Hammer = define_weapon("Light Hammer", "2gp", "1d4 Bludgeoning", 2, ["Light, Thrown (Range: 20/60)"])
+mace = define_weapon("Mace", "5gp", "1d6 Bludgeoning", 4, [])
+quarterstaff = define_weapon("Quarterstaff", "2sp", "1d6 Bludgeoning", 4, ["Versatile (1d8)"])
+sickle = define_weapon("Sickle", "1gp", "1d4 Slashing", 2, ["Light"])
+spear = define_weapon("Spear", "1gp", "1d6 Piercing", 3, ["Thrown (Range: 20/60)", "Versatile (1d8)"])
 
 # Simple Ranged Weapons
-light_Crossbow = define_weapon("25gp", "1d8 Piercing", 5, ["Ammunition (Range: 80/320", "Loading", "Two-Handed"])
-dart = define_weapon("5cp", "1d4 Piercing", 0.25, ["Finesse, Thrown (Range: 20/60)"])
-shortbow = define_weapon("25gp", "1d6 Piercing", 2, ["Ammunition (Range: 80/320)", "Two-Handed"])
-sling = define_weapon("1sp", "1d4 Bludgeoning", 0, ["Ammunition (Range: 30/120)"])
+light_Crossbow = define_weapon("Light Crossbow", "25gp", "1d8 Piercing", 5, ["Ammunition (Range: 80/320", "Loading", "Two-Handed"])
+dart = define_weapon("Dart", "5cp", "1d4 Piercing", 0.25, ["Finesse, Thrown (Range: 20/60)"])
+shortbow = define_weapon("Shortbow", "25gp", "1d6 Piercing", 2, ["Ammunition (Range: 80/320)", "Two-Handed"])
+sling = define_weapon("Sling", "1sp", "1d4 Bludgeoning", 0, ["Ammunition (Range: 30/120)"])
 
 # Martial Melee Weapons
-battleaxe = define_weapon("10gp", "1d8 Slashing", 4, ["Versatile (1d10)"])
-flail = define_weapon("10gp", "1d8 Bludgeoning", 2, [])
-glaive = define_weapon("20gp", "1d10 Slashing", 6, ["Heavy", "Reach", "Two-Handed"])
-greataxe = define_weapon("30gp", "1d12 Slashing", 7, ["Heavy", "Two-Handed"])
-greatsword = define_weapon("50gp", "2d6 Slashing", 6, ["Heavy", "Two-Handed"])
-halberd = define_weapon("20gp", "1d10 Slashing", 6, ["Heavy", "Reach", "Two-Handed"])
-lance = define_weapon("10gp", "1d12 Piercing", 6, ["Reach", "Special"])
-longsword = define_weapon("15gp", "1d8 Slashing", 3, ["Versatile (1d10)"])
-maul = define_weapon("10gp", "2d6 Bludgeoning", 10, ["Heavy", "Two-Handed"])
-morningstar = define_weapon("15gp", "1d8 Piercing", 4, [])
-pike = define_weapon("5gp", "1d10 Piercing", 18, ["Heavy", "Reach", "Two-Handed"])
-rapier = define_weapon("25gp", "1d8 Piercing", 2, ["Finesse"])
-scimitar = define_weapon("25gp", "1d6 Slashing", 3, ["Finesse", "Light"])
-shortsword = define_weapon("10gp", "1d6 Piercing", 2, ["Finesse", "Light"])
-trident = define_weapon("5gp", "1d6 Piercing", 4, ["Thrown (20/60)", "Versatile (1d8)"])
-war_Pick = define_weapon("5gp", "1d8 Piercing", 2, [])
-warhammer = define_weapon("15gp", "1d8 Bludgeoning", 2, ["Versatile (1d8)"])
-whip = define_weapon("2gp", "1d4 Slashing", 3, ["Finesse, Reach"])
+battleaxe = define_weapon("Battleaxe", "10gp", "1d8 Slashing", 4, ["Versatile (1d10)"])
+flail = define_weapon("Flail", "10gp", "1d8 Bludgeoning", 2, [])
+glaive = define_weapon("Glaive", "20gp", "1d10 Slashing", 6, ["Heavy", "Reach", "Two-Handed"])
+greataxe = define_weapon("Greataxe", "30gp", "1d12 Slashing", 7, ["Heavy", "Two-Handed"])
+greatsword = define_weapon("Greatsword", "50gp", "2d6 Slashing", 6, ["Heavy", "Two-Handed"])
+halberd = define_weapon("Halberd", "20gp", "1d10 Slashing", 6, ["Heavy", "Reach", "Two-Handed"])
+lance = define_weapon("Lance", "10gp", "1d12 Piercing", 6, ["Reach", "Special"])
+longsword = define_weapon("Longsword", "15gp", "1d8 Slashing", 3, ["Versatile (1d10)"])
+maul = define_weapon("Maul", "10gp", "2d6 Bludgeoning", 10, ["Heavy", "Two-Handed"])
+morningstar = define_weapon("Morningstar", "15gp", "1d8 Piercing", 4, [])
+pike = define_weapon("Pike", "5gp", "1d10 Piercing", 18, ["Heavy", "Reach", "Two-Handed"])
+rapier = define_weapon("Rapier", "25gp", "1d8 Piercing", 2, ["Finesse"])
+scimitar = define_weapon("Scimitar", "25gp", "1d6 Slashing", 3, ["Finesse", "Light"])
+shortsword = define_weapon("Shortsword", "10gp", "1d6 Piercing", 2, ["Finesse", "Light"])
+trident = define_weapon("Trident", "5gp", "1d6 Piercing", 4, ["Thrown (20/60)", "Versatile (1d8)"])
+war_Pick = define_weapon("War Pick", "5gp", "1d8 Piercing", 2, [])
+warhammer = define_weapon("Warhammer", "15gp", "1d8 Bludgeoning", 2, ["Versatile (1d8)"])
+whip = define_weapon("Whip", "2gp", "1d4 Slashing", 3, ["Finesse, Reach"])
 
 # Martial Ranged Weapons
-blowgun = define_weapon("10gp", "1 Piercing", 1, ["Ammunition (Range: 25/100)", "Loading"])
-hand_Crossbow = define_weapon("75gp", "1d6Piercing", 3, ["Ammunition (Range: 30/120)", "Light", "Loading"])
-heavy_Crossbow = define_weapon("50gp", "1d10 Piercing", 18, ["Ammunition (Range:100/400)", "Heavy", 
+blowgun = define_weapon("Blowgun", "10gp", "1 Piercing", 1, ["Ammunition (Range: 25/100)", "Loading"])
+hand_Crossbow = define_weapon("Hand Crossbow", "75gp", "1d6Piercing", 3, ["Ammunition (Range: 30/120)", "Light", "Loading"])
+heavy_Crossbow = define_weapon("Heavy Crossbow", "50gp", "1d10 Piercing", 18, ["Ammunition (Range:100/400)", "Heavy", 
 	"Loading", "Two-Handed"])
-longbow = define_weapon("50gp", "1d8 Piercing", 2, ["Ammunition (Range: 150/600)", "Heavy", "Two-Handed"])
-net = define_weapon("1gp", 0, 3, ["Special", "Thrown (Range: 5/15)"])
+longbow = define_weapon("Longbow", "50gp", "1d8 Piercing", 2, ["Ammunition (Range: 150/600)", "Heavy", "Two-Handed"])
+net = define_weapon("net", "1gp", 0, 3, ["Special", "Thrown (Range: 5/15)"])
 
 
 
@@ -152,4 +154,12 @@ weapons_list = {
 		net
 	]
 }
+
+
+# print(weapons_list["Martial Melee"][3]["damage"])
+
+
+
+
+
 
