@@ -5,11 +5,9 @@ import json
 
 # 1.	cd AdventurersNexus/frontend
 # 2.	npm run dev
-# 3.	cd ../backend
-# 4.	.venv/Scripts/activate
+# 3.	cd AdventurersNexus/frontend
+# 4.	.venv/Scripts/activate (or on linux: source .venv/bin/activate)
 # 5.	uvicorn app.main:app --reload
-
-rolledDice = []
 
 
 app = FastAPI(title="Adventurers Nexus API", version="1.0.0")

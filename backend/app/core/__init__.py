@@ -5,3 +5,4 @@
 from app.core.dice import roll_dice, adv_or_dis
 from app.core.skills import skills_list
 from app.core.combat import armors_list, weapons_list
+from app.core.modifiers import get_AbilityModifier
