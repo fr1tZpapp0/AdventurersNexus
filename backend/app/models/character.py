@@ -19,14 +19,26 @@ races = [
 	"Dragonborn"
 ]
 
-Dragonborn_Colors = [
-	"Black",
-	"Red",
-	"Green",
-	"Blue",
-	"White",
-	"Copper"
-]
+
+Dragonborn_Colors = {
+	"Black": "Acid",
+	"Blue": "Lightning",
+	"Brass": "Fire",
+	"Bronze": "Lightning",
+	"Copper": "Acid",
+	"Gold": "Fire",
+	"Green": "Poison",
+	"Red": "Fire",
+	"Silver": "Cold",
+	"White": "Cold",
+	"Amethyst": "Force",
+	"Crystal": "Radiant",
+	"Emerald": "Psychic",
+	"Sapphire": "Thunder",
+	"Topaz": "Necrotic"
+}
+
+
 
 classes = [
 	"Artificer",
