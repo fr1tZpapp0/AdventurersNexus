@@ -8,4 +8,6 @@ It WILL get fixed
 ---------------------------------------------------
 
 The roadmap.md file under the 'docs' directory is a current "update" about the project, and where it's headed.
-# CURRENTLY: THE FRONTEND HAS SUCCESSFULLY COMMUNICATED WITH THE BACKEND! STILL NEED TO IMPLEMENT MODIFIERS INTO IT
+# CURRENTLY: The frontend has successfully communicated with the backend!
+# ALSO: The core/cards directory is made: Deck of Many Things is being implemented.
+# SOON: The Deck of Illusions will also be implemented eventually.

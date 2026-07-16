@@ -48,6 +48,15 @@ PHASE 2 - D&D Rules Engine Structure  (CURRENT)
 		backend/
 		|
 		|- core
+            |- cards
+                |- __init__.py              {BEGUN}
+                |- card.py                  {SET FOR DECK OF MANY THINGS}
+                |- deck_of_illusions.py     {NOT STARTED}
+                |- deck_of_many_things.py   {SET}
+                |- deck.py                  {SET FOR DECK OF MANY THINGS}
+                |- doi_Data.py              {NOT STARTED}
+                |- domt_Data.py             {SET}
+            |- __init__.py      {ONLY FOR EASIER CALLING IN THE BACKEND MAIN.PY FILE}
 			|- dice.py			{Completed Dice Rolling & Verified Frontend Communication}
 			|- abilities.py		{NOT STARTED}
 			|- modifiers.py		{NOT STARTED}
@@ -107,6 +116,7 @@ PHASE 4 - Database Integration
 		Characters
 		Campaigns
 		Items
+        Artifacts
 		Spells
 		Monsters
 
