@@ -26,6 +26,9 @@ def roll_dice(die_number, amount, modifier):
 		if modifier is None:
 			modifier = 0
 
+		if amount is None:
+			amount = 1
+
 		for i in range(amount):
 			rolled_number = randint(1, die_number)
 			rolled_modded = rolled_number + modifier
@@ -77,6 +80,8 @@ def adv_or_dis(modifier, isDisadvantage):
 		kept = max(modded_results)
 		adv = True
 		dis = False
+
+
 
 	return RolledDice(
 		amount=1,

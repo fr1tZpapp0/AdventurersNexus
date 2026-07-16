@@ -48,7 +48,7 @@ PHASE 2 - D&D Rules Engine Structure  (CURRENT)
 		backend/
 		|
 		|- core
-			|- dice.py			{Completed Dice Rolling}
+			|- dice.py			{Completed Dice Rolling & Verified Frontend Communication}
 			|- abilities.py		{NOT STARTED}
 			|- modifiers.py		{NOT STARTED}
 			|- skills.py		{HAS BEGUN: List of all Skills}
