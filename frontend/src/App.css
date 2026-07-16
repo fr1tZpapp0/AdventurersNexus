@@ -33,7 +33,7 @@ body {
 
 
 
-.rolledOutput {
+.fetchedOutput {
 	color: rgb(212, 175, 55);
 	font-weight: bolder;
 }
@@ -57,7 +57,7 @@ body {
 				0 0 60px rgb(255, 223, 0);
 }
 
-#center {
+#tests {
 	display: block;
 	justify-content: center;
 }

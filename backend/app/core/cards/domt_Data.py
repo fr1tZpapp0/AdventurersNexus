@@ -1,4 +1,4 @@
-from card import Card
+from app.core.cards.card import Card
 
 
 Balance_Desc = """Your mind suffers a wrenching alteration, causing your alignment to change. Lawful becomes chaotic, 

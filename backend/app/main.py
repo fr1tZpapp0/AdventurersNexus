@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.core import roll_dice, adv_or_dis
+from app.core.cards import deck_of_many_things
 import json, typing
 from starlette.responses import Response
 
@@ -77,6 +78,19 @@ def disadvantage(modifier: int | None=0):
 
 
 
+@app.get('/decks/manyThings/{amount}')
+def draw_domt(amount: int | None=1, size: int | None=13):
+	domt = deck_of_many_things.DeckOfManyThings(size)
 
+	if amount is None:
+		amount = 1
 
+	
+	card = domt.draw()
+	if card.returnToDeck:
+		domt.add_card(card)
+	else:
+		pass
+	
+	return card
 

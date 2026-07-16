@@ -1,7 +1,5 @@
-from random import choice, shuffle
-from deck import Deck
-from card import Card
-from domt_Data import get_cards_for_size, ALL_DOMT_CARDS
+from app.core.cards.deck import Deck
+from app.core.cards.domt_Data import get_cards_for_size
 
 class DeckOfManyThings(Deck):
 	def __init__(self, size):
