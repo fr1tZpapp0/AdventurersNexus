@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.core import roll_dice, adv_or_dis
 from app.core.cards import deck_of_many_things
+from app.core.cards import deck_of_illusions
 import json, typing
 from starlette.responses import Response
 
@@ -34,13 +35,16 @@ app.add_middleware(
 	allow_headers=["*"]
 )
 
+
+
 @app.get("/")
 def get_status():
 	return "Welcome to the Adventurers Nexus API!"
 
-@app.get("/api/data/")
-async def get_data():
-	return {"Message": "Hello from FastAPI backend!"}
+@app.get("/api/data")
+def get_data():
+	return "Welcome to API Backend"
+
 
 
 @app.get("/characters/load/{character_id}")
@@ -93,4 +97,14 @@ def draw_domt(amount: int | None=1, size: int | None=13):
 		pass
 	
 	return card
+
+
+@app.get('/decks/illusions')
+def draw_doi():
+	doi = deck_of_illusions.DeckOfIllusions()
+
+	card = doi.draw()
+
+	return card
+
 

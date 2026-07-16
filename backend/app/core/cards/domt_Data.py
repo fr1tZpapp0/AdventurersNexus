@@ -254,15 +254,16 @@ ALL_DOMT_CARDS = [
 	Jester
 ]
 
-def get_cards_for_size(size):
-    if size == 13:
-        return [
-            card for card in ALL_DOMT_CARDS
-            if card.in13Deck
-        ]
-    
-    elif size == 22:
-        return ALL_DOMT_CARDS.copy()
+def get_cards_for_size_DOMT(size):
+	if size == 13:
+		return [
+			card for card in ALL_DOMT_CARDS
+			if card.in13Deck
+		]
 
-    else:
-        raise ValueError("Invalid Deck Size")
+	elif size == 22:
+		return ALL_DOMT_CARDS.copy()
+
+	else:
+		raise ValueError("Invalid Deck Size")
+

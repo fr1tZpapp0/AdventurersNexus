@@ -34,6 +34,18 @@
 	};
 
 
+	const [illusionCard, setIllusion] = useState(null);
+	const fetchIllusion = async () => {
+		try {
+			const response = await fetch(`http://127.0.0.1:8000/decks/illusions`);
+			const data = await response.json();
+			setIllusion(data.name)
+		} catch (error) {
+			console.error('error fecthing data:', error);
+		}
+	};
+
+
 
 	const handleNumberInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const numericValue = (e.target as HTMLInputElement).valueAsNumber;
@@ -71,10 +83,19 @@
 		<section id='tests'>
 			<button type='button' className='roller' onClick={fetchCard}>Draw Card</button>
 			<br></br>
-			{cardName !== null && <h2 className='fetchedOutput'>Card: 
-				<span className='outputFancy'>{cardName}</span></h2>}
-			{cardName !== null && <h2 className='fetchedOutput'>Card Description: 
-				<span className='outputFancy'>{cardDescription}</span></h2>}
+			{cardName !== null && <h2 className='fetchedOutput'>Card: <span className='outputFancy'>
+				{cardName}</span></h2>}
+			{cardName !== null && <h2 className='fetchedOutput'>Card Description: <span className='outputFancy'>
+				{cardDescription}</span></h2>}
+		</section>
+		<br></br>
+		<br></br>
+		<br></br>
+		<section id='tests'>
+			<button type='button' className='roller' onClick={fetchIllusion}>Draw Illusion Card</button>
+			<br></br>
+			{illusionCard !== null && <h2 className='fetchedOutput'>Card: <span className='outputFancy'>
+				{illusionCard}</span></h2>}
 		</section>
 	</>
 	)
