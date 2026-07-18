@@ -1,11 +1,12 @@
+import json, typing
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.core import roll_dice, adv_or_dis
 from app.core.cards import deck_of_many_things
 from app.core.cards import deck_of_illusions
-import json, typing
 from starlette.responses import Response
+
 
 # 1.	cd AdventurersNexus/frontend
 # 2.	npm run dev
@@ -21,6 +22,7 @@ class PrettyJSONResponse(Response):
 
 
 app = FastAPI(default_response_class=PrettyJSONResponse, title="Adventurers Nexus API", version="1.0.0")
+
 
 origins = [
 	"http://localhost:5173",
@@ -40,6 +42,8 @@ app.add_middleware(
 @app.get("/")
 def get_status():
 	return "Welcome to the Adventurers Nexus API!"
+
+
 
 @app.get("/api/data")
 def get_data():

@@ -43,7 +43,7 @@ Moon_desc = """You gain the ability to cast Wish 1d3 times. (Roll 1d6. Divide th
 Rogue_desc = """An NPC of the DM's choice becomes Hostile toward you. You don't know the identity of this NPC until they 
 or someone else reveals it. Nothing less than divine intervention can end the NPC's hostility toward you."""
 
-Ruin_desc = """All forms of wealth that can carry or own, other than magic items, are lost to you. Portable property vanishes. 
+Ruin_desc = """All forms of wealth that you carry or own, other than magic items, are lost to you. Portable property vanishes. 
 Businesses, buildings, and land you own are lost in a way that alters reality the least. If you have a Bastion, it is 
 destroyed by some calamity beyond your control. Any documentation that proves you should own something lost to this card 
 also disappears."""
@@ -69,7 +69,7 @@ Vizier_desc = """At any time you choose within one year of drawing this card, yo
 meditation and mentally receive a truthful answer to that question. Besides information, the answer helps 
 you solve a puzzling problem or other dilemma. In other words, the knowledge comes with wisdom on how to apply it."""
 
-Void_desc = """Your soul is drawn from youur body and contained in an object in a place of the DM's choice. One or 
+Void_desc = """Your soul is drawn from your body and contained in an object in a place of the DM's choice. One or 
 more powerful beings guard the place. While your soul is trapped in this way, your body is inert, ceases aging, 
 and requires no food, air, or water. A Wish spell can't return your soul to your body, but the spell reveals the 
 location of the object that holds your soul. You draw no more cards."""
