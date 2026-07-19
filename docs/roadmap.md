@@ -42,7 +42,7 @@ PHASE 1 - Skeletal Backend
 
 
 ---------------------------------------------------
-PHASE 2 - D&D Rules Engine Structure  (CURRENT)
+PHASE 2 - D&D Rules Engine Structure
 
 	Python (not yet web)
 		backend/
@@ -75,7 +75,7 @@ PHASE 2 - D&D Rules Engine Structure  (CURRENT)
 
 
 ---------------------------------------------------
-PHASE 3 - Character System (THE FIRST BIG ONE)
+PHASE 3 - Character System (THE FIRST BIG ONE)  (CURRENT)
 
 	models/character.py
 		Add:

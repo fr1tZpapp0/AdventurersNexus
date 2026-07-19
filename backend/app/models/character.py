@@ -94,6 +94,9 @@ classes = [
 	"Wizard"
 ]
 
+
+
+
 @dataclass
 class Character:
 	name: str
@@ -107,7 +110,7 @@ class Character:
 	ac: int
 	hp_max:	int
 	hp_current:	int
-	hp_temp:	int
+	hp_temp: int
 	proficiency_bonus: int
 	initiative: int
 	hit_dice_max: str
@@ -159,6 +162,5 @@ class Character:
 	saving_throw_CHA: int
 
 	skills: dict
-
 
 
