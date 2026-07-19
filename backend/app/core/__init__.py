@@ -8,6 +8,15 @@ from app.core.combat import armors_list, weapons_list
 from app.core.modifiers import get_AbilityModifier
 
 
+from app.core.monsters import Monster
+from app.core.monsters import cr0_monsters
+from app.core.monsters import cr0125_monsters
+from app.core.monsters import cr025_monsters
+from app.core.monsters import cr05_monsters
+from app.core.monsters import cr1_monsters
+
+
+
 from app.core.cards.card import Card
 from app.core.cards.deck import Deck
 
