@@ -149,7 +149,53 @@ cr1_monsters = [
 	"Tiger"
 ]
 
+cr2_monsters = []
 
+cr3_monsters = []
+
+cr4_monsters = []
+
+cr5_monsters = []
+
+cr6_monsters = []
+
+cr7_monsters = []
+
+cr8_monsters = []
+
+cr9_monsters = []
+
+cr10_monsters = []
+
+cr11_monsters = []
+
+cr12_monsters = []
+
+cr13_monsters = []
+
+cr14_monsters = []
+
+cr15_monsters = []
+
+cr16_monsters = []
+
+cr17_monsters = []
+
+cr18_monsters = []
+
+cr19_monsters = []
+
+cr20_monsters = []
+
+cr21_monsters = []
+
+cr22_monsters = []
+
+cr23_monsters = []
+
+cr24_monsters = []
+
+cr30_monsters = []
 
 
 
