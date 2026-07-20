@@ -1,5 +1,32 @@
 from dataclasses import dataclass
 
+@dataclass
+class Monster():
+	name: str
+	mon_type: str
+	mon_alignment: str
+	mon_special_tag: str
+
+	mon_size: str
+	mon_ac: int
+	mon_hp: int
+	mon_speeds: dict
+
+	mon_stats: dict
+	mon_immunities: list[str]
+	mon_resistances: list[str]
+	mon_vulnerabilities: list[str]
+	mon_senses: dict
+	mon_languages: dict
+	mon_cr: int
+	
+	mon_actions: dict
+	mon_reactions: dict
+
+
+
+
+
 
 cr0_monsters = [
 	"Awakened Shrub",
@@ -196,35 +223,6 @@ cr23_monsters = []
 cr24_monsters = []
 
 cr30_monsters = []
-
-
-
-@dataclass
-class Monster():
-	name: str
-	mon_type: str
-	mon_alignment: str
-	mon_special_tag: str
-
-	mon_size: str
-	mon_ac: int
-	mon_hp: int
-	mon_speeds: dict
-
-	mon_stats: dict
-	mon_immunities: list[str]
-	mon_resistances: list[str]
-	mon_vulnerabilities: list[str]
-	mon_senses: dict
-	mon_languages: dict
-	mon_cr: int
-	
-	mon_actions: dict
-	mon_reactions: dict
-
-
-
-
 
 
 
