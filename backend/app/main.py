@@ -8,11 +8,13 @@ from app.core.cards import deck_of_illusions
 from starlette.responses import Response
 
 
+
 # 1.	cd AdventurersNexus/frontend
 # 2.	npm run dev
 # 3.	cd AdventurersNexus/backend
 # 4.	.venv/Scripts/activate (or on linux: source .venv/bin/activate)
 # 5.	uvicorn app.main:app --reload
+
 
 
 class PrettyJSONResponse(Response):
@@ -21,13 +23,17 @@ class PrettyJSONResponse(Response):
 		return json.dumps(content, indent=4).encode("utf-8")
 
 
+
 app = FastAPI(default_response_class=PrettyJSONResponse, title="Adventurers Nexus API", version="1.0.0")
+
 
 
 origins = [
 	"http://localhost:5173",
 	"http://127.0.0.1:5173"
 ]
+
+
 
 app.add_middleware(
 	CORSMiddleware,
@@ -63,20 +69,15 @@ def load_character(character_id: int):
 
 
 
-
 @app.get('/dice/roll/{die_number}')
 def roll(die_number: int, amount: int | None=1, modifier: int | None=0):
 	return roll_dice(die_number, amount, modifier)
 
 
 
-
-
 @app.get('/dice/advantage')
 def advantage(modifier: int | None=0):
 	return adv_or_dis(modifier, False)
-
-
 
 
 

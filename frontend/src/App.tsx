@@ -20,6 +20,7 @@
 	};
 
 
+
 	const [cardName, setCard] = useState(null);
 	const [cardDescription, setDescription] = useState(null);
 	const fetchCard = async () => {
@@ -33,6 +34,7 @@
 		}
 	};
 
+    
 
 	const [illusionCard, setIllusion] = useState(null);
 	const fetchIllusion = async () => {
