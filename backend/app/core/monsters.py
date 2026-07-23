@@ -78,11 +78,63 @@ Awakened_Shrub = Monster(
 	mon_reactions={}
 )
 
+Baboon = Monster(
+	name="Baboon",
+	mon_type="Beast",
+	mon_alignment="Unaligned",
+	mon_special_tag="",
+	mon_size="Small",
+	mon_ac=12,
+	mon_hp=3,
+	mon_speeds={
+		"Walking": 30,
+		"Climbing": 30
+	},
+	mon_stats={
+		"STR": 8,
+		"DEX": 14,
+		"CON": 11,
+		"INT": 4,
+		"WIS": 12,
+		"CHA": 6
+	},
+	mon_mods={
+		"STR": -1,
+		"DEX": 2,
+		"CON": 0,
+		"INT": -3,
+		"WIS": 1,
+		"CHA": -2
+	},
+	mon_immunities=[],
+	mon_resistances=[],
+	mon_vulnerabilities=[],
+	mon_senses={},
+	mon_languages={"Passive Perception": 11},
+	mon_cr=0,
+	mon_actions={
+		"Bite": {
+			"Melee Weapon Attack": 1,
+			"Reach": 5,
+			"Target": 1,
+			"Hit": "1d4-1 Piercing Damage"
+		},
+		"Pack Tactics": """The baboon has advantage on an attack roll against a creature if at least one of the baboon's allies 
+		is within 5 feet of the creature and the ally isn't incapacitated."""
+	},
+	mon_reactions={}
+)
+
+Badger = Monster(
+	name="Badger",
+	mon_type="Beast"
+)
+
 
 
 cr0_monsters = [
 	Awakened_Shrub,
-	"Baboon",
+	Baboon,
 	"Badger",
 	"Bat",
 	"Cat",
