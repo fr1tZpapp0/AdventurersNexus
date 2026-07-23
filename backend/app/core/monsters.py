@@ -13,6 +13,7 @@ class Monster():
 	mon_speeds: dict
 
 	mon_stats: dict
+	mon_mods: dict
 	mon_immunities: list[str]
 	mon_resistances: list[str]
 	mon_vulnerabilities: list[str]
@@ -26,10 +27,61 @@ class Monster():
 
 
 
+Awakened_Shrub = Monster(
+	name="Awakened Shrub",
+	mon_type="Plant",
+	mon_alignment="Unaligned",
+	mon_special_tag="",
+	mon_size="Small",
+	mon_ac=9,
+	mon_hp=10,
+	mon_speeds={
+		"Walking Speed": 20
+	},
+	mon_stats={
+		"STR": 3,
+		"DEX": 8,
+		"CON": 11,
+		"INT": 10,
+		"WIS": 10,
+		"CHA": 6
+	},
+	mon_mods={
+		"STR": -4,
+		"DEX": -1,
+		"CON": 0,
+		"INT": 0,
+		"WIS": 0,
+		"CHA": -2
+	},
+	mon_immunities=[],
+	mon_resistances=["Piercing"],
+	mon_vulnerabilities=["fire"],
+	mon_senses={
+		"Passive Perception": 10
+	},
+	mon_languages={
+		"One language know by its creator": "Understands"
+	},
+	mon_cr=0,
+	mon_actions={
+		"Rake": {
+			"To Hit": 1,
+			"Reach (in ft)": 5,
+			"Target": 1,
+			"Hit": "1d4-1 slashing damage"
+		},
+		"False Appearance": {
+			"Ability": "While the shrub, given sentience and mobility by the awaken spell or similar magic"
+		}
+	},
+	mon_reactions={}
+)
+
 
 
 cr0_monsters = [
-	"Awakened Shrub",
+	Awakened_Shrub,
 	"Baboon",
 	"Badger",
 	"Bat",
@@ -176,54 +228,257 @@ cr1_monsters = [
 	"Tiger"
 ]
 
-cr2_monsters = []
+cr2_monsters = [
+	"Ankheg",
+	"Awakened Tree",
+	"Azer",
+	"Bandit Captain",
+	"Berserker",
+	"Black Dragon Wyrmling",
+	"Bronze Dragon Wyrmling",
+	"Centaur",
+	"Cult Fanatic",
+	"Druid",
+	"Ettercap",
+	"Gargoyle",
+	"Gelatinous Cube",
+	"Ghast",
+	"Giant Boar",
+	"Giant Constrictor Snake",
+	"Giant Elk",
+	"Gibbering Mouther",
+	"Green Dragon Wyrmling",
+	"Grick",
+	"Griffon",
+	"Hunter Shark",
+	"Merrow",
+	"Mimic",
+	"Minotaur Skeleton",
+	"Ochre Jelly",
+	"Ogre",
+	"Ogre Zombie",
+	"Pegasus",
+	"Plesiosaurus",
+	"Polar Bear",
+	"Priest",
+	"Rhinoceros",
+	"Rug of Smothering",
+	"Saber-Toothed Tiger",
+	"Sea Hag",
+	"Silver Dragon Wyrmling",
+	"Swarm of Poisonous Snakes",
+	"Wererat",
+	"White Dragon Wyrmling",
+	"Will-o'-Wisp"
+]
 
-cr3_monsters = []
+cr3_monsters = [
+	"Basilisk",
+	"Bearded Devil",
+	"Blue Dragon Wyrmling",
+	"Doppelganger",
+	"Giant Scorpion",
+	"Gold Dragon Wyrmling",
+	"Green Hag",
+	"Hell Hound",
+	"Killer Whale",
+	"Knight",
+	"Manticore",
+	"Minotaur",
+	"Mummy",
+	"Nightmare",
+	"Owlbear",
+	"Phase Spider",
+	"Veteran",
+	"Werewolf",
+	"Wight",
+	"Winter Wolf"	
+]
 
-cr4_monsters = []
+cr4_monsters = [
+	"Black Pudding",
+	"Chuul",
+	"Couatl",
+	"Elephant",
+	"Ettin",
+	"Ghost",
+	"Lamia",
+	"Red Dragon Wyrmling",
+	"Succubus/Incubus",
+	"Wereboar",
+	"Weretiger"
+]
 
-cr5_monsters = []
+cr5_monsters = [
+	"Air Elemental",
+	"Barbed Devil",
+	"Bulette",
+	"Earth Elemental",
+	"Fire Elemental",
+	"Flesh Golem",
+	"Giant Crocodile",
+	"Giant Shark",
+	"Gladiator",
+	"Gorgon",
+	"Half-Red Dragon Veteran",
+	"Hill Giant",
+	"Night Hag",
+	"Otyugh",
+	"Roper",
+	"Salamander",
+	"Shambling Mound",
+	"Triceratops",
+	"Troll",
+	"Unicorn",
+	"Vampire Spawn",
+	"Water Elemental",
+	"Werebear",
+	"Wraith",
+	"Xorn"
+]
 
-cr6_monsters = []
+cr6_monsters = [
+	"Chimera",
+	"Drider",
+	"Invisible Stalker",
+	"Mage",
+	"Mammoth",
+	"Medusa",
+	"Vrock",
+	"Wyvern",
+	"Young Brass Dragon",
+	"Young White Dragon"
+]
 
-cr7_monsters = []
+cr7_monsters = [
+	"Giant Ape",
+	"Oni",
+	"Shield Guardian",
+	"Stone Giant",
+	"Young Black Dragon",
+	"Young Copper Dragon"
+]
 
-cr8_monsters = []
+cr8_monsters = [
+	"Assassin",
+	"Chain Devil",
+	"Cloaker",
+	"Frost Giant",
+	"Hezrou",
+	"Hydra",
+	"Spirit Naga",
+	"Tyrannosaurus Rex",
+	"Young Bronze Dragon",
+	"Young Green Dragon"
+]
 
-cr9_monsters = []
+cr9_monsters = [
+	"Bone Devil",
+	"Clay Golem",
+	"Cloud Giant",
+	"Fire Giant",
+	"Glabrezu",
+	"Treant",
+	"Young Blue Dragon",
+	"Young Silver Dragon"
+]
 
-cr10_monsters = []
+cr10_monsters = [
+	"Aboleth",
+	"Deva",
+	"Guardian Naga",
+	"Stone Golem",
+	"Young Gold Dragon",
+	"Young Red Dragon"
+]
 
-cr11_monsters = []
+cr11_monsters = [
+	"Behir",
+	"Djinni",
+	"Efreeti",
+	"Gynosphinx",
+	"Horned Devil",
+	"Remorhaz",
+	"Roc"
+]
 
-cr12_monsters = []
+cr12_monsters = [
+	"Archmage",
+	"Erinyes"
+]
 
-cr13_monsters = []
+cr13_monsters = [
+	"Adult Brass Dragon",
+	"Adult White Dragon",
+	"Nalfeshnee",
+	"Rakshasa",
+	"Storm Giant",
+	"Vampire"
+]
 
-cr14_monsters = []
+cr14_monsters = [
+	"Adult Black Dragon",
+	"Adult Copper Dragon",
+	"Ice Devil"
+]
 
-cr15_monsters = []
+cr15_monsters = [
+	"Adult Bronze Dragon",
+	"Adult Green Dragon",
+	"Mummy Lord",
+	"Purple Worm"
+]
 
-cr16_monsters = []
+cr16_monsters = [
+	"Adult Blue Dragon",
+	"Adult Silver Dragon",
+	"Iron Golem",
+	"Marilith",
+	"Planear"
+]
 
-cr17_monsters = []
+cr17_monsters = [
+	"Adult Gold Dragon",
+	"Aduult Red Dragon",
+	"Androsphinx",
+	"Dragon Turtle"
+]
 
-cr18_monsters = []
+cr19_monsters = [
+	"Balor"
+]
 
-cr19_monsters = []
+cr20_monsters = [
+	"Ancient Brass Dragon",
+	"Ancient White Dragon",
+	"Pit Fiend"
+]
 
-cr20_monsters = []
+cr21_monsters = [
+	"Ancient Black Dragon",
+	"Ancient Copper Dragon",
+	"Lich",
+	"Solar"
+]
 
-cr21_monsters = []
+cr22_monsters = [
+	"Ancient Bronze Dragon",
+	"Ancient Green Dragon"
+]
 
-cr22_monsters = []
+cr23_monsters = [
+	"Ancient Blue Dragon",
+	"Ancient Silver Dragon",
+	"Kraken"
+]
 
-cr23_monsters = []
+cr24_monsters = [
+	"Ancient Gold Dragon",
+	"Ancient Red Dragon"
+]
 
-cr24_monsters = []
-
-cr30_monsters = []
-
-
+cr30_monsters = [
+	"Tarrasque"
+]
 
 
