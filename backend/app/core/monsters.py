@@ -1,5 +1,7 @@
 from dataclasses import dataclass
 
+###	https://5thsrd.org/gamemaster_rules/monster_indexes/monsters_by_cr/	###
+
 @dataclass
 class Monster():
 	name: str
@@ -14,6 +16,7 @@ class Monster():
 
 	mon_stats: dict
 	mon_mods: dict
+	mon_skills: dict
 	mon_immunities: list[str]
 	mon_resistances: list[str]
 	mon_vulnerabilities: list[str]
@@ -23,6 +26,45 @@ class Monster():
 	
 	mon_actions: dict
 	mon_reactions: dict
+
+
+MON_TEMPLATE = Monster(
+	name="",
+	mon_type="",
+	mon_alignment="",
+	mon_special_tag="",
+	mon_size="",
+	mon_ac=0,
+	mon_hp=0,
+	mon_speeds={
+		"Walking Speed": 30
+	},
+	mon_stats={
+		"STR": 0,
+		"DEX": 0,
+		"CON": 0,
+		"INT": 0,
+		"WIS": 0,
+		"CHA": 0
+	},
+	mon_mods={
+		"STR": 0,
+		"DEX": 0,
+		"CON": 0,
+		"INT": 0,
+		"WIS": 0,
+		"CHA": 0
+	},
+	mon_skills={},
+	mon_immunities=[],
+	mon_resistances=[],
+	mon_vulnerabilities=[],
+	mon_senses={},
+	mon_languages={},
+	mon_cr=0,
+	mon_actions={},
+	mon_reactions={}
+)
 
 
 
@@ -54,6 +96,7 @@ Awakened_Shrub = Monster(
 		"WIS": 0,
 		"CHA": -2
 	},
+	mon_skills={},
 	mon_immunities=[],
 	mon_resistances=["Piercing"],
 	mon_vulnerabilities=["fire"],
@@ -106,6 +149,7 @@ Baboon = Monster(
 		"WIS": 1,
 		"CHA": -2
 	},
+	mon_skills={},
 	mon_immunities=[],
 	mon_resistances=[],
 	mon_vulnerabilities=[],
@@ -127,19 +171,256 @@ Baboon = Monster(
 
 Badger = Monster(
 	name="Badger",
-	mon_type="Beast"
+	mon_type="Beast",
+	mon_alignment="Unaligned",
+	mon_special_tag="",
+	mon_size="Tiny",
+	mon_ac=10,
+	mon_hp=3,
+	mon_speeds={
+		"Walking": 20,
+		"Burrow": 5
+	},
+	mon_stats={
+		"STR": 4,
+		"DEX": 11,
+		"CON": 12,
+		"INT": 2,
+		"WIS": 12,
+		"CHA": 5
+	},
+	mon_mods={
+		"STR": -3,
+		"DEX": 0,
+		"CON": 1,
+		"INT": -4,
+		"WIS": 1,
+		"CHA": -3
+	},
+	mon_skills={},
+	mon_immunities=[],
+	mon_resistances=[],
+	mon_vulnerabilities=[],
+	mon_senses={
+		"Darkvision": 60,
+		"Passive Perception": 11
+	},
+	mon_languages={},
+	mon_cr=0,
+	mon_actions={
+		"Keen Smell": "The badger has advantage on Wisdom (perception) checks that rely on smell.",
+		"Bite": {
+			"Melee Weapon Attack": 2,
+			"Reach": 5,
+			"Targets": 1,
+			"Hit": "1 Piercing Damage"
+		}
+	},
+	mon_reactions={}
 )
+
+Bat = Monster(
+	name="Bat",
+	mon_type="Beast",
+	mon_alignment="Unaligned",
+	mon_special_tag="",
+	mon_size="Tiny",
+	mon_ac=12,
+	mon_hp=1,
+	mon_speeds={
+		"Walking Speed": 5,
+		"Fly Speed": 30
+	},
+	mon_stats={
+		"STR": 2,
+		"DEX": 15,
+		"CON": 8,
+		"INT": 2,
+		"WIS": 12,
+		"CHA": 4
+	},
+	mon_mods={
+		"STR": -4,
+		"DEX": 2,
+		"CON": -1,
+		"INT": -4,
+		"WIS": 1,
+		"CHA": -3
+	},
+	mon_skills={},
+	mon_immunities=[],
+	mon_resistances=[],
+	mon_vulnerabilities=[],
+	mon_senses={
+		"Blindisght": 60,
+		"Passive Perception": 11
+	},
+	mon_languages={},
+	mon_cr=0,
+	mon_actions={
+		"Echolocation": "The bat can't use its blindsight while deafened",
+		"Keen Sight": "The Bat has advantage on Wisdom (perception) checks that rely on hearing.",
+		"Bite": {
+			"Melee Weapon Attack": 0,
+			"Reach": 5,
+			"Targets": 1,
+			"Hit": "1 Piercing Damage"
+		}
+	},
+	mon_reactions={}
+)
+
+
+Cat = Monster(
+	name="Cat",
+	mon_type="Beast",
+	mon_alignment="Unaligned",
+	mon_special_tag="",
+	mon_size="Tiny",
+	mon_ac=12,
+	mon_hp=2,
+	mon_speeds={
+		"Walking Speed": 40,
+		"Climbing Speed": 30
+	},
+	mon_stats={
+		"STR": 3,
+		"DEX": 15,
+		"CON": 10,
+		"INT": 3,
+		"WIS": 12,
+		"CHA": 7
+	},
+	mon_mods={
+		"STR": -4,
+		"DEX": 2,
+		"CON": -4,
+		"INT": 0,
+		"WIS": 1,
+		"CHA": -2
+	},
+	mon_skills={
+		"Perception": 3,
+		"Stealth": 4
+	},
+	mon_immunities=[],
+	mon_resistances=[],
+	mon_vulnerabilities=[],
+	mon_senses={
+		"Passive Perception": 13
+	},
+	mon_languages={},
+	mon_cr=0,
+	mon_actions={
+		"Keen Smell": "The Cat has advantage on Wisdom (perception) checks that rely on smell.",
+		"Claws": {
+			"Melee Weapon Attack": 0,
+			"Reach": 5,
+			"Targets": 1,
+			"Hit": "1 Slashing Damage"
+		}
+	},
+	mon_reactions={}
+)
+
+Commoner = Monster(
+	name="Commoner",
+	mon_type="Humanoid",
+	mon_alignment="Any Alignment",
+	mon_special_tag="Any Race",
+	mon_size="Medium",
+	mon_ac=10,
+	mon_hp=4,
+	mon_speeds={
+		"Walking Speed": 30
+	},
+	mon_stats={
+		"STR": 10,
+		"DEX": 10,
+		"CON": 10,
+		"INT": 10,
+		"WIS": 10,
+		"CHA": 10
+	},
+	mon_mods={
+		"STR": 0,
+		"DEX": 0,
+		"CON": 0,
+		"INT": 0,
+		"WIS": 0,
+		"CHA": 0
+	},
+	mon_skills={},
+	mon_immunities=[],
+	mon_resistances=[],
+	mon_vulnerabilities=[],
+	mon_senses={
+		"Passive Perception": 10
+	},
+	mon_languages={
+		"Any one language, usually Common": "Speaks"
+	},
+	mon_cr=0,
+	mon_actions={
+		"Club": {
+			"Melee Weapon Attack": 2,
+			"Reach": 5,
+			"Target": 1,
+			"Hit": "1d4 Bludgeoning Damage"
+		}
+	},
+	mon_reactions={}
+)
+
+Crab = Monster(
+	name="",
+	mon_type="",
+	mon_alignment="",
+	mon_special_tag="",
+	mon_size="",
+	mon_ac=0,
+	mon_hp=0,
+	mon_speeds={
+		"Walking Speed": 30
+	},
+	mon_stats={
+		"STR": 0,
+		"DEX": 0,
+		"CON": 0,
+		"INT": 0,
+		"WIS": 0,
+		"CHA": 0
+	},
+	mon_mods={
+		"STR": 0,
+		"DEX": 0,
+		"CON": 0,
+		"INT": 0,
+		"WIS": 0,
+		"CHA": 0
+	},
+	mon_skills={},
+	mon_immunities=[],
+	mon_resistances=[],
+	mon_vulnerabilities=[],
+	mon_senses={},
+	mon_languages={},
+	mon_cr=0,
+	mon_actions={},
+	mon_reactions={}
+)
+
 
 
 
 cr0_monsters = [
 	Awakened_Shrub,
 	Baboon,
-	"Badger",
-	"Bat",
-	"Cat",
-	"Commoner",
-	"Crab",
+	Badger,
+	Bat,
+	Cat,
+	Commoner,
+	Crab,
 	"Deer",
 	"Eagle",
 	"Frog",
