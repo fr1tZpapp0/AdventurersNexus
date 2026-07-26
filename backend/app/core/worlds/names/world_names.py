@@ -1,6 +1,0 @@
-
-
-
-world_names = [
-    "Enthiria"
-]

@@ -1,0 +1,1 @@
+from .continent_generator import generate_continent

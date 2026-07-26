@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 from uuid import UUID
-import random
 
 @dataclass
 class World():
@@ -26,8 +25,10 @@ class World():
 			f"Calendar: {len(self.calendar)}"
 			)
 
-	def add_continents(self, continent):
-		return self.continents
+	def add_continent(self, continent):
+		return self.continents.append(continent)
 
 	def add_oceans(self, ocean):
-		return self.oceans
+		return self.oceans.append(ocean)
+
+
