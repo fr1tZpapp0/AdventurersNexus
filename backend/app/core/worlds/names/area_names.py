@@ -1,7 +1,6 @@
 
 worldNames = [
-	"Ethoria",
-	"Brumboonis"
+	"Ethoria"
 ]
 
 worldAges = [

@@ -1,5 +1,10 @@
 
 
+
+
+
+
+
 biomeSpecializer = [
 	"Temperate",
 	"Frozen",
