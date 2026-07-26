@@ -2,31 +2,42 @@
 
 
 elvenNames = []
+elvenLastNames = []
 
 
 
 draconicNames = []
+draconicLastNames = []
 
 
 
-infernalNames = []
-
-
-
-abyssalNames = []
+tieflingNames = []
+tieflingLastNames = []
 
 
 
 dwarvenNames = []
+dwarvenLastNames = []
 
 
 
 humanNames = []
+humanLastNames = []
 
 
 
-lastNames = []
+halflingNames = []
+halflingLastNames = []
 
+
+
+gnomishNames = []
+gnomishLastNames = []
+
+
+
+orcishNames = []
+orcishLastNames = []
 
 
 

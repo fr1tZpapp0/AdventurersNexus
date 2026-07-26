@@ -3,7 +3,7 @@ from uuid import uuid4
 from random import choice, randint
 from ..region import Region
 from ..biome import Biome
-from ..names.biome_names import biomeSpecializer, biomeTypes
+from ..data.biome_data import biomeSpecializer, biomeTypes
 from .settlement_generator import generate_settlement
 
 
@@ -11,9 +11,8 @@ def generate_region():
 	seed = randint(0, 999999999)
 	random.seed(seed)
 
-
-	bSpecial = choice(biomeSpecializer)
 	bType = choice(biomeTypes)
+	bSpecial = choice(biomeSpecializer[bType.lower()])
 	biomeName = f"{bSpecial} {bType}"
 
 
