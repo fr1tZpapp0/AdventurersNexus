@@ -6,7 +6,7 @@ from app.core import roll_dice, adv_or_dis
 from app.core.cards import deck_of_many_things
 from app.core.cards import deck_of_illusions
 from starlette.responses import Response
-
+from app.core.worlds.generators.world_generator import generate_world
 
 
 # 1.	cd AdventurersNexus/frontend
@@ -113,3 +113,8 @@ def draw_doi():
 	return card
 
 
+@app.get('/tests/world')
+def world_test():
+	world = generate_world()
+
+	return world
