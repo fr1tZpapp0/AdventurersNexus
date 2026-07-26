@@ -1,25 +1,15 @@
 import random
 from uuid import uuid4
 from random import choice, randint
-from ..settlement import Settlement
-from ..names.area_names import settlementNames
 
-def generate_settlement(settlement_list):
+from ..classes.generator import GenerationContext
+from ..classes.settlement import Settlement
+
+def generate_settlement(context: GenerationContext):
 	seed = randint(0, 999999999)
 	random.seed(seed)
 
-	while True:
-		if len(settlement_list) == 0 or len(settlement_list) is None:
-			s_name = choice(settlementNames)
-			break
-		else:
-			s_name = choice(settlementNames)
-			if s_name in settlement_list:
-				s_name = ""
-				s_name = choice(settlementNames)
-			else:
-				break
-
+	s_name = context.available_settlement_names.pop(context.rng.randrange(len(context.available_settlement_names)))
 
 
 	settlement = Settlement(

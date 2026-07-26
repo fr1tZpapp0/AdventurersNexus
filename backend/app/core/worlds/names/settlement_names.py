@@ -1,22 +1,3 @@
-
-worldNames = [
-	"Ethoria"
-]
-
-worldAges = [
-	"Age of Dawn",
-	"Age of the Waning Flower"
-]
-
-continentalNames = [
-	"Jeefbu",
-	"Beefland",
-	"Goombudu",
-	"Wentthure",
-	"Gajkertn",
-	"Fajungeht"
-]
-
 settlementNames = [
 	"Brevia",
 	"Dlorb",
@@ -52,4 +33,3 @@ settlementNames = [
 	"Duncaster",
 	"Falkirk"
 	]
-

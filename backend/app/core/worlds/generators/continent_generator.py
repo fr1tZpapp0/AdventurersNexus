@@ -1,26 +1,20 @@
 import random
 from uuid import uuid4
 from random import choice, randint
-from ..continent import Continent
+
+
+
+from ..classes.continent import Continent
+from ..classes.generator import GenerationContext
+
 from .region_generator import generate_region
-from ..names.area_names import continentalNames
 
 
-def generate_continent(continent_list):
+def generate_continent(context: GenerationContext):
 	seed = randint(0, 999999999)
 	random.seed(seed)
 
-	while True:
-		if len(continent_list) == 0 or len(continent_list) is None:
-			c_name = choice(continentalNames)
-			break
-		else:
-			c_name = choice(continentalNames)
-			if c_name in continent_list:
-				c_name = ""
-				c_name = choice(continentalNames)
-			else:
-				break
+	c_name = context.available_continent_names.pop(context.rng.randrange(len(context.available_continent_names)))
 
 
 	continent = Continent(
@@ -35,7 +29,7 @@ def generate_continent(continent_list):
 	)
 
 	for i in range(randint(1, 4)):
-		region = generate_region()
+		region = generate_region(context)
 		continent.add_region(region)
 
 

@@ -7,6 +7,7 @@ from .biome import Biome
 class Region():
 	id: UUID
 	seed: int
+	name: str
 	biome: Biome
 	settlements: list
 	dungeons: list
@@ -20,6 +21,7 @@ class Region():
 		return (
 			f"ID: {self.id}\n"
 			f"Seed: {self.seed}\n"
+			f"Name: {self.name}\n"
 			f"Biome: {self.biome}\n"
 			f"Settlements: {self.settlements}\n"
 			f"Dungeons: {self.dungeons}\n"

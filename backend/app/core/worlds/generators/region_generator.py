@@ -1,42 +1,55 @@
 import random
 from uuid import uuid4
 from random import choice, randint
-from ..region import Region
-from ..biome import Biome
-from ..data.biome_data import biomeSpecializer, biomeTypes
+
+
+from ..classes.region import Region
+from ..classes.biome import Biome
+from ..classes.generator import GenerationContext
+
+
+from ..data.Biome.biome_data import BIOME_TYPE
+
+
+
 from .settlement_generator import generate_settlement
 
 
-def generate_region():
-	seed = randint(0, 999999999)
-	random.seed(seed)
+def generate_region(context: GenerationContext):
+	biome_seed = randint(0, 999999999)
+	random.seed(biome_seed)
 
-	bType = choice(biomeTypes)
-	bSpecial = choice(biomeSpecializer[bType.lower()])
-	biomeName = f"{bSpecial} {bType}"
 
+	b_rng = random.Random(biome_seed)
+
+	biomeType = b_rng.choice(list(BIOME_TYPE.keys()))
+	biomeData = BIOME_TYPE[biomeType]
 
 	biome = Biome(
 		id=uuid4(),
-		name=biomeName,
-		climate=bSpecial,
-		terrain=[],
-		temperature=randint(-10, 110),
-		humidity=randint(1, 100),
-		elevation=randint(500, 5272),
-		danger_level=randint(0, 15),
-		resources=[],
+		seed=biome_seed,
+		biome_type=biomeType,
+		specializer=b_rng.choice(biomeData["Specializers"]),
+		temperature=(0, 0),
+		humidity=0,
+		danger_level=0,
 		flora=[],
 		fauna=[],
-		settlement_type=[],
-		monsters=[]
+		monsters=[],
+		resources=[]
 	)
 
+	region_seed = randint(0, 999999999)
+	random.seed(region_seed)
+
+
+	r_name = context.available_region_names.pop(context.rng.randrange(len(context.available_region_names)))
 
 
 	region = Region(
 		id=uuid4(),
-		seed=seed,
+		seed=region_seed,
+		name=r_name,
 		biome=biome,
 		settlements=[],
 		dungeons=[],
@@ -46,12 +59,12 @@ def generate_region():
 		weather=[]
 	)
 
-
-	
-
-	for i in range(2):
-		settlement = generate_settlement(region.settlements)
+	number_of_settlements = context.rng.randint(1, 5)
+	for _ in range(number_of_settlements):
+		settlement = generate_settlement(context)
 		region.add_settlement(settlement)
+
+
 
 	return region
 
