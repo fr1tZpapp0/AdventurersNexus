@@ -9,6 +9,8 @@ from starlette.responses import Response
 from app.core.worlds.generators.world_generator import generate_world
 
 
+### IF GITHUB ISSUES OCCUR: RUN git pull --rebase
+
 # 1.	cd AdventurersNexus/frontend
 # 2.	npm run dev
 # 3.	cd AdventurersNexus/backend
