@@ -1,7 +1,7 @@
 import random, uuid
-from world import World
-from names.world_names import world_names
-from names.world_ages import world_ages
+from ..world import World
+from ..names.world_names import world_names
+from ..names.world_ages import world_ages
 
 
 

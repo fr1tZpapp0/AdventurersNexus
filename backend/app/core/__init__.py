@@ -2,18 +2,18 @@
 #   core/__init__.py
 #
 
-from backend.app.core.dice.dice import roll_dice, adv_or_dis
-from backend.app.core.skills.skills import skills_list
-from backend.app.core.combat.combat import armors_list, weapons_list
-from backend.app.core.skills.modifiers import get_AbilityModifier
+from app.core.dice.dice import roll_dice, adv_or_dis
+from app.core.skills.skills import skills_list
+from app.core.combat.combat import armors_list, weapons_list
+from app.core.skills.modifiers import get_AbilityModifier
 
 
-from backend.app.core.monsters.monsters import Monster
-from backend.app.core.monsters.monsters import cr0_monsters
-from backend.app.core.monsters.monsters import cr0125_monsters
-from backend.app.core.monsters.monsters import cr025_monsters
-from backend.app.core.monsters.monsters import cr05_monsters
-from backend.app.core.monsters.monsters import cr1_monsters
+from app.core.monsters.monsters import Monster
+from app.core.monsters.monsters import cr0_monsters
+from app.core.monsters.monsters import cr0125_monsters
+from app.core.monsters.monsters import cr025_monsters
+from app.core.monsters.monsters import cr05_monsters
+from app.core.monsters.monsters import cr1_monsters
 
 
 
