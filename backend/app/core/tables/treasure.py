@@ -43,6 +43,61 @@ Hematite = Gemstone(
 	weight_per_carat=0.1
 )
 
+Lapis_Lazuli = Gemstone(
+	name="Lapis Lazuli",
+	rarity_percentage=72,
+	cost_per_carat="10 gp",
+	weight_per_carat=0.1
+)
+
+Malachite = Gemstone(
+	name="Malachite",
+	rarity_percentage=72,
+	cost_per_carat="10 gp",
+	weight_per_carat=0.1
+)
+
+Moss_Agate = Gemstone(
+	name="Moss Agate",
+	rarity_percentage=72,
+	cost_per_carat="10 gp",
+	weight_per_carat=0.1
+)
+
+Obsidian = Gemstone(
+	name="Obsidian",
+	rarity_percentage=72,
+	cost_per_carat="10 gp",
+	weight_per_carat=0.1
+)
+
+Rhodochrosite = Gemstone(
+	name="Rhodochrosite",
+	rarity_percentage=72,
+	cost_per_carat="10 gp",
+	weight_per_carat=0.1
+)
+
+Tiger_Eye = Gemstone(
+	name="Tiger Eye",
+	rarity_percentage=72,
+	cost_per_carat="10 gp",
+	weight_per_carat=0.1
+)
+
+Turquoise = Gemstone(
+	name="Turquoise",
+	rarity_percentage=72,
+	cost_per_carat="10 gp",
+	weight_per_carat=0.1
+)
+
+Bloodstone = Gemstone(
+	name="Bloodstone",
+	rarity_percentage=84,
+	cost_per_carat="50 gp",
+	weight_per_carat=0.1
+)
 
 
 PRECIOUS_GEMS = [
