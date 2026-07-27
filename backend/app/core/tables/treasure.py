@@ -36,12 +36,21 @@ Eye_Agate = Gemstone(
 	weight_per_carat=0.1
 )
 
+Hematite = Gemstone(
+	name="Hematite",
+	rarity_percentage=90,
+	cost_per_carat="10 gp",
+	weight_per_carat=0.1
+)
+
+
 
 PRECIOUS_GEMS = [
 	Azurite,
 	Banded_Agate,
 	Blue_Quartz,
-	Eye_Agate
+	Eye_Agate,
+	Hematite
 ]
 
 
