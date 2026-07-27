@@ -18,7 +18,7 @@ from ..names.region_names import regionNames
 
 
 
-### DO NOT CHANGE THIS LINE: RANDOM.SEED(INT) | IS HOW IT MUST BE DONE!
+### DO NOT CHANGE THE LINE: RANDOM.SEED(INT) | IS HOW IT MUST BE DONE!
 def generate_world():
 	available_settlement_names = settlementNames.copy()
 	available_continent_names = continentalNames.copy()

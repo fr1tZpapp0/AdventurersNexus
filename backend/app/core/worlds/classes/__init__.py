@@ -4,7 +4,7 @@ from .region import Region
 from .settlement import Settlement
 from .generator import GenerationContext
 from .biome import Biome
-
+from .dungeon import Dungeon
 
 
 
