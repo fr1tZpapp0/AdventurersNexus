@@ -8,6 +8,56 @@ from .table_classes import Gemstone
 # NOTE: Precious Metals are harder to have accurate pricing
 # https://olddungeonmaster.com/2016/12/02/dd-5e-metals/
 
+Adamantine = Precious_Material(
+	name="Adamantine",
+	rarity_percentage=0.06,
+	cost_per_pound="5,000 gp",
+	strength=23,
+	purity=100
+)
+
+Brass = Precious_Material(
+	name="Brass",
+	rarity_percentage=52,
+	cost_per_pound="3 sp",
+	strength=16,
+	purity=100
+)
+
+Bronze = Precious_Material(
+	name="Bronze",
+	rarity_percentage=73,
+	cost_per_pound="4 sp",
+	strength=18,
+	purity=100
+)
+
+Cold_Iron = Precious_Material
+
+Copper = Precious_Material
+
+Electrum = Precious_Material
+
+Gold = Precious_Material
+
+Iron = Precious_Material
+
+Lead = Precious_Material
+
+Mithral = Precious_Material
+
+Platinum = Precious_Material
+
+Silver = Precious_Material
+
+Steel = Precious_Material
+
+Tin = Precious_Material
+
+
+
+
+
 Azurite = Gemstone(
 	name="Azurite",
 	rarity_percentage=90,
@@ -105,7 +155,18 @@ PRECIOUS_GEMS = [
 	Banded_Agate,
 	Blue_Quartz,
 	Eye_Agate,
-	Hematite
+	Hematite,
+	Lapis_Lazuli,
+	Malachite,
+	Moss_Agate,
+	Obsidian,
+	Rhodochrosite,
+	Tiger_Eye,
+	Turquoise,
+	Bloodstone
 ]
 
 
+PRECIOUS_MATERIALS = [
+
+]
