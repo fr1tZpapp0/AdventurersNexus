@@ -7,6 +7,8 @@ from .table_classes import Gemstone
 # Precious Materials are found at:
 # NOTE: Precious Metals are harder to have accurate pricing
 # https://olddungeonmaster.com/2016/12/02/dd-5e-metals/
+# The STRENGTH attribute of the precious materials is also the materials
+#		natural AC
 
 Adamantine = Precious_Material(
 	name="Adamantine",
@@ -32,7 +34,13 @@ Bronze = Precious_Material(
 	purity=100
 )
 
-Cold_Iron = Precious_Material
+Cold_Iron = Precious_Material(
+	name="Cold Iron",
+	rarity_percentage=73,
+	cost_per_pound="4 sp",
+	strength=20,
+	purity=100
+)
 
 Copper = Precious_Material
 
